@@ -1,4 +1,4 @@
-r""""This file is based on torch/utils/data/_utils/worker.py
+r""" "This file is based on torch/utils/data/_utils/worker.py
 
 Contains definitions of the methods used by the _BaseDataLoaderIter workers.
 These **needs** to be in global scope since Py2 doesn't support serializing

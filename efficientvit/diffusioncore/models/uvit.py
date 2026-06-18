@@ -56,7 +56,7 @@ def patchify(imgs, patch_size):
 def unpatchify(x, channels=3):
     patch_size = int((x.shape[2] // channels) ** 0.5)
     h = w = int(x.shape[1] ** 0.5)
-    assert h * w == x.shape[1] and patch_size ** 2 * channels == x.shape[2]
+    assert h * w == x.shape[1] and patch_size**2 * channels == x.shape[2]
     x = einops.rearrange(x, "B (h w) (p1 p2 C) -> B C (h p1) (w p2)", h=h, p1=patch_size, p2=patch_size)
     return x
 
